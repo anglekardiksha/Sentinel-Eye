@@ -4,7 +4,12 @@ from detector import predict_video, MODEL_PATH
 import os
 
 app = Flask(__name__)
-CORS(app)
+
+CORS(app, resources={
+    r"/*": {
+        "origins": ["https://sentinel-eye-main-main.vercel.app"]
+    }
+})
 
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
