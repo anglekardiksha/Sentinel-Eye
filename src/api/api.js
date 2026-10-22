@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // Make sure this matches the port your Flask app.py is running on
-const API_BASE_URL = "http://127.0.0.1:5000";
+const API_BASE_URL = "https://sentinel-eye-backend.onrender.com";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -27,3 +27,4 @@ export const uploadVideo = async (file) => {
 };
 
 export default api;
+
